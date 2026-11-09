@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahra Alharz</title>
+<meta name="description" content="Zahra Alharz — ML researcher working on trustworthy evaluation signals, culturally grounded LLM benchmarks, and multi-agent reinforcement learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<header class="site-header">
+  <a href="#top" class="brand">ZA</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow">ML Researcher</p>
+    <h1>Zahra&nbsp;Alharz</h1>
+    <p class="hero-sub">
+      I build benchmarks that catch when a model, a judge, or a reward
+      signal <em>looks</em> right while being wrong — and I'm moving that
+      question into reinforcement learning.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">See the work</a>
+      <a href="mailto:alharzzahra@gmail.com" class="btn btn-ghost">Get in touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">evaluation benchmarks shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">languages &amp; cultures audited</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">01</span>
+        <span class="stat-label">multi-agent RL codebase, from scratch</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2><span class="num">01</span> About</h2>
+    <div class="about-grid">
+      <p>
+        I work at the intersection of <strong>LLM evaluation</strong> and
+        <strong>reinforcement learning</strong>. My background is in
+        preference-optimization methods (DPO / APO / RLHF-style training)
+        from my time with KAUST's OPTIMAL Lab, and most of my recent work
+        has been building benchmarks that expose a specific failure mode:
+        an answer, a caption, or a judge's score that <em>reads</em> as
+        correct but isn't — in Arabic visual question answering, in
+        culturally grounded reasoning, and in LLM-as-judge evaluation more
+        broadly.
+      </p>
+      <p>
+        That question — <em>when does a learning signal look trustworthy
+        while being wrong?</em> — is what's pulling me toward RL. I've
+        started building and running independent multi-agent RL
+        experiments to understand how the same problem shows up when the
+        "signal" is a reward, not a label, and whether the fixes that work
+        for one transfer to the other.
+      </p>
+    </div>
+  </section>
+
+  <section id="research" class="research">
+    <h2><span class="num">02</span> Research focus</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Trustworthy learning signals</h3>
+        <p>
+          Human feedback, LLM-judge scores, and multi-agent reward sharing
+          all share a failure mode: the signal can look reliable and still
+          be wrong. I design evaluation protocols that catch this by
+          hand-auditing, not just trusting the aggregate score.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Culturally grounded evaluation</h3>
+        <p>
+          Benchmarks built specifically for Arabic language and Gulf /
+          Islamic cultural context, where off-the-shelf English benchmarks
+          and translation-based evaluation quietly miss the failure modes
+          that matter.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Multi-agent reinforcement learning</h3>
+        <p>
+          Independent Q-learning in sequential social dilemmas — when
+          cooperation emerges from self-interested learning alone, when it
+          doesn't, and what reward shaping actually does to agents that
+          can't see each other.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2><span class="num">03</span> Projects</h2>
+    <div class="project-list">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Fatan</h3>
+          <span class="project-tag">LLM Evaluation</span>
+        </div>
+        <p class="project-desc">
+          Culturally Aligned vs. Culturally Competent — a benchmark testing
+          whether multimodal LLMs genuinely understand Gulf/Islamic cultural
+          context or just pattern-match plausible answers. Three-tier design
+          (MCQ, open-ended, "none of the above") built specifically to catch
+          models that guess well on multiple choice but fall apart once the
+          safety net of a correct option is removed.
+        </p>
+        <div class="project-links">
+          <a href="https://huggingface.co/datasets/Fatan-Cultural-Eval/fatan" target="_blank" rel="noopener">Dataset ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Sarab</h3>
+          <span class="project-tag">LLM Evaluation</span>
+        </div>
+        <p class="project-desc">
+          An Arabic cause-diagnostic visual-hallucination benchmark —
+          testing not just <em>whether</em> a model hallucinates on Arabic
+          visual questions but <em>why</em>: visual ambiguity, multimodal
+          inconsistency, or incorrect context, each isolated by construction
+          rather than inferred after the fact.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/HasanBGit/Sarab-Benchmark" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>ArabPhD</h3>
+          <span class="project-tag">LLM Evaluation</span>
+        </div>
+        <p class="project-desc">
+          A cause-diagnostic Arabic visual-hallucination evaluation
+          benchmark for multimodal LLMs, with a novel Arabic Cultural
+          Counter-Common-Sense mode and a five-category cultural hallucination
+          taxonomy (attire, cuisine, architecture, cultural objects, script).
+        </p>
+        <div class="project-links">
+          <span class="project-links-note">In progress</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>social-dilemma-rl</h3>
+          <span class="project-tag">Reinforcement Learning</span>
+        </div>
+        <p class="project-desc">
+          Independent tabular Q-learning agents in sequential social
+          dilemmas — iterated matrix games and a spatial tragedy-of-the-commons
+          gridworld. Includes a real, reported negative result: inequity-averse
+          reward shaping made resource collapse <em>worse</em> here, with a
+          concrete hypothesis for why, instead of a result quietly dropped.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/ZahraAliAlharz/social-dilemma-rl" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2><span class="num">04</span> Contact</h2>
+    <p>
+      I'm always glad to talk about evaluation design, RL, or where the
+      two should meet. Easiest ways to reach me:
+    </p>
+    <div class="contact-links">
+      <a href="mailto:alharzzahra@gmail.com" class="contact-link">
+        <span class="contact-kind">Email</span>
+        <span class="contact-value">alharzzahra@gmail.com</span>
+      </a>
+      <a href="https://github.com/ZahraAliAlharz" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-kind">GitHub</span>
+        <span class="contact-value">@ZahraAliAlharz</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Zahra Alharz, 2026</span>
+</footer>
+
+</body>
+</html>
