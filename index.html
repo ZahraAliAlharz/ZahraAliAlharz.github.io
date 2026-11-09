@@ -20,8 +20,9 @@
   <a href="#top" class="brand">ZA</a>
   <nav>
     <a href="#about">About</a>
-    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -43,15 +44,15 @@
     <div class="hero-stats">
       <div class="stat">
         <span class="stat-num">3</span>
-        <span class="stat-label">evaluation benchmarks shipped</span>
+        <span class="stat-label">research labs &amp; fellowships</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">papers &amp; preprints co-authored</span>
       </div>
       <div class="stat">
         <span class="stat-num">2</span>
         <span class="stat-label">languages &amp; cultures audited</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">01</span>
-        <span class="stat-label">multi-agent RL codebase, from scratch</span>
       </div>
     </div>
   </section>
@@ -62,13 +63,13 @@
       <p>
         I work at the intersection of <strong>LLM evaluation</strong> and
         <strong>reinforcement learning</strong>. My background is in
-        preference-optimization methods (DPO / APO / RLHF-style training)
-        from my time with KAUST's OPTIMAL Lab, and most of my recent work
-        has been building benchmarks that expose a specific failure mode:
-        an answer, a caption, or a judge's score that <em>reads</em> as
-        correct but isn't — in Arabic visual question answering, in
-        culturally grounded reasoning, and in LLM-as-judge evaluation more
-        broadly.
+        preference-optimization methods (DPO / APO / RLOO) from my time
+        as a visiting researcher with KAUST's OPTIMAL Lab, and most of my
+        recent work has been building benchmarks that expose a specific
+        failure mode: an answer, a caption, or a judge's score that
+        <em>reads</em> as correct but isn't — in Arabic visual question
+        answering, in culturally grounded reasoning, and in LLM-as-judge
+        evaluation more broadly.
       </p>
       <p>
         That question — <em>when does a learning signal look trustworthy
@@ -78,11 +79,119 @@
         "signal" is a reward, not a label, and whether the fixes that work
         for one transfer to the other.
       </p>
+      <p class="voice-note">
+        Most of this started from a stubborn habit of not trusting a
+        result until I've audited it by hand — on every benchmark I've
+        built, the thing that ended up mattering was the case I almost
+        didn't bother checking.
+      </p>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2><span class="num">02</span> Experience</h2>
+    <div class="timeline">
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jul 2026 – Aug 2026</span>
+        </div>
+        <div class="tl-body">
+          <h3>AI Research Fellow <span class="tl-org">· King Khalid University (Remote)</span></h3>
+          <p>
+            Selected for the Summer AI Fellowship, a competitive six-week
+            graduate-level research program under Dr. Saeed Alahmari.
+            First author of <a href="#sarab-pub">Sarab</a>, a
+            cause-diagnostic Arabic visual-hallucination benchmark for
+            multimodal LLMs.
+          </p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Dec 2025 – Jun 2026</span>
+        </div>
+        <div class="tl-body">
+          <h3>Visiting Researcher <span class="tl-org">· OPTIMAL Lab, KAUST</span></h3>
+          <p>
+            Built a Saudi-dialect preference-optimization pipeline on
+            KAUST's Ibex cluster: two 10K-pair preference datasets,
+            trained with DPO, APO, and RLOO (TRL, PEFT/LoRA), serving
+            27B generators with vLLM. Built a multi-judge scoring
+            pipeline (three LLM judges, five generators, 0.81–0.88
+            inter-judge correlation) and found that base-model choice
+            moved benchmark scores more than any preference-tuning
+            variant tested — which redirected the project's strategy
+            toward evaluation itself as the actual bottleneck.
+          </p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jan 2024 – Sep 2025</span>
+        </div>
+        <div class="tl-body">
+          <h3>AI Researcher <span class="tl-org">· ASAS AI Lab (Remote)</span></h3>
+          <p>
+            Contributed to Joud, a large open-source Arabic pre-training
+            dataset — curated and cleaned multi-domain corpora including
+            Common Crawl subsets, ~60GB of dialectal data, and 20 million
+            Arabic mathematical samples. Select corpora were used in
+            AraLLaMA's (ACL 2025) pre-training pipeline.
+          </p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jan 2026</span>
+        </div>
+        <div class="tl-body">
+          <h3>MenaML Winter School <span class="tl-org">· Thuwal, Saudi Arabia</span></h3>
+          <p>
+            Selected from 2,000+ applicants (300 accepted) for advanced
+            training in large-scale LLM training, AI ethics, and
+            high-performance computing, led by Google DeepMind research
+            scientists.
+          </p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jun 2024 – Aug 2024</span>
+        </div>
+        <div class="tl-body">
+          <h3>AI Training Program <span class="tl-org">· Oxford University (ALAT–KAUST)</span></h3>
+          <p>
+            One of 15 selected from 8,000+ applicants. 300+ hours of
+            training in reinforcement learning (MDPs, DQN, policy
+            gradients, actor-critic, multi-agent RL) and computer vision
+            (GANs, diffusion models, vision transformers).
+          </p>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-meta">
+          <span class="tl-date">Jul 2023 – Aug 2023</span>
+        </div>
+        <div class="tl-body">
+          <h3>AI Specialization <span class="tl-org">· KAUST Academy</span></h3>
+          <p>
+            Intensive program covering generative models, reinforcement
+            learning, graph neural networks, NLP, and optimization.
+          </p>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <section id="research" class="research">
-    <h2><span class="num">02</span> Research focus</h2>
+    <h2><span class="num">03</span> Research focus</h2>
     <div class="card-grid">
       <article class="card">
         <h3>Trustworthy learning signals</h3>
@@ -115,7 +224,7 @@
   </section>
 
   <section id="projects" class="projects">
-    <h2><span class="num">03</span> Projects</h2>
+    <h2><span class="num">04</span> Projects</h2>
     <div class="project-list">
 
       <article class="project">
@@ -146,26 +255,11 @@
           testing not just <em>whether</em> a model hallucinates on Arabic
           visual questions but <em>why</em>: visual ambiguity, multimodal
           inconsistency, or incorrect context, each isolated by construction
-          rather than inferred after the fact.
+          rather than inferred after the fact. 400+ culturally grounded
+          images, fully original cultural counter-common-sense set.
         </p>
         <div class="project-links">
           <a href="https://github.com/HasanBGit/Sarab-Benchmark" target="_blank" rel="noopener">Repository ↗</a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <h3>ArabPhD</h3>
-          <span class="project-tag">LLM Evaluation</span>
-        </div>
-        <p class="project-desc">
-          A cause-diagnostic Arabic visual-hallucination evaluation
-          benchmark for multimodal LLMs, with a novel Arabic Cultural
-          Counter-Common-Sense mode and a five-category cultural hallucination
-          taxonomy (attire, cuisine, architecture, cultural objects, script).
-        </p>
-        <div class="project-links">
-          <span class="project-links-note">In progress</span>
         </div>
       </article>
 
@@ -187,10 +281,116 @@
       </article>
 
     </div>
+
+    <h3 class="subhead">Earlier work</h3>
+    <div class="mini-grid">
+      <article class="mini-card">
+        <h4>PenaltyOracle</h4>
+        <p>Computer vision system (YOLOv11) for automated soccer ball detection and trajectory analysis. Co-built a 28K-frame annotated dataset from 117 clips (Autodistill, GroundingDINO, Roboflow).</p>
+        <span class="mini-date">Jul – Sep 2025</span>
+      </article>
+      <article class="mini-card">
+        <h4>Beneath the Waves</h4>
+        <p>Coral reef segmentation model for the KAUST–NEOM Red Sea restoration project — 5× faster than manual analysis. Presented to KAUST leadership.</p>
+        <span class="mini-date">Jun – Aug 2024</span>
+      </article>
+      <article class="mini-card">
+        <h4>Water Quality Prediction</h4>
+        <p>Graduation thesis: AI-driven water quality forecasting for Saudi Arabia, &gt;95% accuracy, deployed with a real-time Power BI dashboard.</p>
+        <span class="mini-date">Oct 2023 – Jun 2024</span>
+      </article>
+      <article class="mini-card">
+        <h4>Gas Pipeline Corrosion Detection</h4>
+        <p>Image-classification pipeline (MobileNetV2) over 1,567 pipeline images for predictive maintenance — 95.6% validation accuracy.</p>
+        <span class="mini-date">Jan – Jun 2024</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="publications">
+    <h2><span class="num">05</span> Publications</h2>
+    <div class="pub-list">
+
+      <article class="pub" id="sarab-pub">
+        <p class="pub-status">Manuscript — targeting ACL 2027</p>
+        <h3>Sarab: A Cause-Diagnostic Arabic Visual Hallucination Evaluation Benchmark for MLLMs</h3>
+        <p class="pub-authors">Alharz, Z., Barmandah, H., Mahyoub, A., &amp; Alahmari, S.&nbsp;S.</p>
+        <p class="pub-note">Constructed and reviewed 400+ culturally grounded images, generated and refined Arabic captions and distractors, and fully created the cultural counter-common-sense set.</p>
+      </article>
+
+      <article class="pub">
+        <p class="pub-status">Preprint — targeting ACL 2027</p>
+        <h3>Joud: A Massive Pre-training Dataset for Arabic Large Language Models</h3>
+        <p class="pub-authors">Almubarak, K., Alharthi, A., Alshahrani, S., Masoud, R., Altuwayjiri, A., Zhu, J., Alharz, Z., &amp; Alghamdi, E.</p>
+        <p class="pub-note">Built a scraping pipeline for underrepresented Arabic web domains, curated multi-domain corpora, and co-authored the Related Work section.</p>
+      </article>
+
+      <article class="pub">
+        <p class="pub-status">Published — ICCAE 2024</p>
+        <h3>Sarid: Arabic Storyteller Using a Fine-Tuned LLM and Text-to-Image Generation</h3>
+        <p class="pub-authors">Alabdulrahman, M., Khayyat, R., Almowallad, K., &amp; Alharz, Z.</p>
+        <p class="pub-note">16th International Conference on Computer and Automation Engineering, 242–246. <a href="https://doi.org/10.1109/ICCAE59995.2024.10569190" target="_blank" rel="noopener">DOI ↗</a></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="recognition" class="recognition">
+    <h2><span class="num">06</span> Honors &amp; Skills</h2>
+    <div class="recog-grid">
+      <div class="recog-col">
+        <h3>Honors &amp; Awards</h3>
+        <ul class="honors-list">
+          <li>Best Presentation Award, Digital Image Processing &amp; Methods, ICCAE 2024</li>
+          <li>Selected, MenaML Winter School (300 of 2,000+ applicants), 2026</li>
+          <li>Selected, Oxford ALAT–KAUST AI Program (15 of 8,000+ applicants), 2024</li>
+          <li>Academic Excellence Award, GPA 3.92/4.0, 2019–2020</li>
+          <li>Academic Excellence Award, GPA 3.60/4.0, 2020–2021</li>
+        </ul>
+        <h3 class="recog-sub">Education</h3>
+        <p class="edu-line">
+          B.S., Computer Science — Imam Abdulrahman Bin Faisal University<br>
+          <span class="edu-meta">Graduated Aug 2024 · GPA 3.46/4.0 (Top 15%)</span>
+        </p>
+      </div>
+      <div class="recog-col">
+        <h3>Skills</h3>
+        <div class="skill-group">
+          <span class="skill-label">LLM Fine-Tuning</span>
+          <div class="skill-tags">
+            <span>TRL</span><span>PEFT / LoRA</span><span>DPO</span><span>APO</span><span>RLOO</span><span>vLLM</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Evaluation</span>
+          <div class="skill-tags">
+            <span>LightEval</span><span>LLM-as-Judge</span><span>Multi-Judge Scoring</span><span>Custom Benchmarks</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Computer Vision</span>
+          <div class="skill-tags">
+            <span>YOLOv11</span><span>SAM</span><span>SegFormer</span><span>GroundingDINO</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Programming &amp; Infra</span>
+          <div class="skill-tags">
+            <span>Python</span><span>PyTorch</span><span>Docker</span><span>SLURM</span><span>Claude Code</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Languages</span>
+          <div class="skill-tags">
+            <span>Arabic (Native)</span><span>English (C1)</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2><span class="num">04</span> Contact</h2>
+    <h2><span class="num">07</span> Contact</h2>
     <p>
       I'm always glad to talk about evaluation design, RL, or where the
       two should meet. Easiest ways to reach me:
@@ -203,6 +403,14 @@
       <a href="https://github.com/ZahraAliAlharz" target="_blank" rel="noopener" class="contact-link">
         <span class="contact-kind">GitHub</span>
         <span class="contact-value">@ZahraAliAlharz</span>
+      </a>
+      <a href="https://www.linkedin.com/in/zahra-alharz/" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-kind">LinkedIn</span>
+        <span class="contact-value">/in/zahra-alharz</span>
+      </a>
+      <a href="https://huggingface.co/ZahraAlharz" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-kind">Hugging Face</span>
+        <span class="contact-value">@ZahraAlharz</span>
       </a>
     </div>
   </section>
