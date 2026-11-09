@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
@@ -27,9 +28,20 @@
   </nav>
 </header>
 
+<nav class="dot-nav" aria-label="Section navigation">
+  <a href="#about" data-label="About"></a>
+  <a href="#experience" data-label="Experience"></a>
+  <a href="#research" data-label="Research"></a>
+  <a href="#projects" data-label="Projects"></a>
+  <a href="#publications" data-label="Publications"></a>
+  <a href="#recognition" data-label="Honors &amp; Skills"></a>
+  <a href="#contact" data-label="Contact"></a>
+</nav>
+
 <main id="top">
 
   <section class="hero">
+    <canvas id="signal-canvas" aria-hidden="true"></canvas>
     <p class="eyebrow">ML Researcher</p>
     <h1>Zahra&nbsp;Alharz</h1>
     <p class="hero-sub">
@@ -57,7 +69,7 @@
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about reveal">
     <h2><span class="num">01</span> About</h2>
     <div class="about-grid">
       <p>
@@ -88,7 +100,7 @@
     </div>
   </section>
 
-  <section id="experience" class="experience">
+  <section id="experience" class="experience reveal">
     <h2><span class="num">02</span> Experience</h2>
     <div class="timeline">
 
@@ -190,7 +202,7 @@
     </div>
   </section>
 
-  <section id="research" class="research">
+  <section id="research" class="research reveal">
     <h2><span class="num">03</span> Research focus</h2>
     <div class="card-grid">
       <article class="card">
@@ -223,7 +235,7 @@
     </div>
   </section>
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects reveal">
     <h2><span class="num">04</span> Projects</h2>
     <div class="project-list">
 
@@ -281,33 +293,9 @@
       </article>
 
     </div>
-
-    <h3 class="subhead">Earlier work</h3>
-    <div class="mini-grid">
-      <article class="mini-card">
-        <h4>PenaltyOracle</h4>
-        <p>Computer vision system (YOLOv11) for automated soccer ball detection and trajectory analysis. Co-built a 28K-frame annotated dataset from 117 clips (Autodistill, GroundingDINO, Roboflow).</p>
-        <span class="mini-date">Jul – Sep 2025</span>
-      </article>
-      <article class="mini-card">
-        <h4>Beneath the Waves</h4>
-        <p>Coral reef segmentation model for the KAUST–NEOM Red Sea restoration project — 5× faster than manual analysis. Presented to KAUST leadership.</p>
-        <span class="mini-date">Jun – Aug 2024</span>
-      </article>
-      <article class="mini-card">
-        <h4>Water Quality Prediction</h4>
-        <p>Graduation thesis: AI-driven water quality forecasting for Saudi Arabia, &gt;95% accuracy, deployed with a real-time Power BI dashboard.</p>
-        <span class="mini-date">Oct 2023 – Jun 2024</span>
-      </article>
-      <article class="mini-card">
-        <h4>Gas Pipeline Corrosion Detection</h4>
-        <p>Image-classification pipeline (MobileNetV2) over 1,567 pipeline images for predictive maintenance — 95.6% validation accuracy.</p>
-        <span class="mini-date">Jan – Jun 2024</span>
-      </article>
-    </div>
   </section>
 
-  <section id="publications" class="publications">
+  <section id="publications" class="publications reveal">
     <h2><span class="num">05</span> Publications</h2>
     <div class="pub-list">
 
@@ -335,7 +323,7 @@
     </div>
   </section>
 
-  <section id="recognition" class="recognition">
+  <section id="recognition" class="recognition reveal">
     <h2><span class="num">06</span> Honors &amp; Skills</h2>
     <div class="recog-grid">
       <div class="recog-col">
@@ -389,7 +377,7 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
     <h2><span class="num">07</span> Contact</h2>
     <p>
       I'm always glad to talk about evaluation design, RL, or where the
