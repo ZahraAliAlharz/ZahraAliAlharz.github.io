@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zahra Alharz</title>
-<meta name="description" content="Zahra Alharz — ML researcher working on trustworthy evaluation signals, culturally grounded LLM benchmarks, and reinforcement learning.">
+<meta name="description" content="Zahra Alharz: ML researcher working on trustworthy evaluation signals, culturally grounded LLM benchmarks, and reinforcement learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -48,8 +48,9 @@
     <h1>Zahra&nbsp;Alharz</h1>
     <p class="hero-sub">
       I build benchmarks that catch when a model, a judge, or a reward
-      signal <em>looks</em> right while being wrong — and I'm moving that
-      question into reinforcement learning.
+      signal <em>looks</em> right while being wrong. My research sits
+      across LLM evaluation and RL-based post-training: the same
+      question, asked of a label and of a reward.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">See the work</a>
@@ -61,29 +62,29 @@
     <h2><span class="num">01</span> About</h2>
     <div class="about-grid">
       <p>
-        I work at the intersection of <strong>LLM evaluation</strong> and
-        <strong>reinforcement learning</strong>. My background is in
-        preference-optimization methods (DPO / APO / RLOO) from my time
-        as a visiting researcher with KAUST's OPTIMAL Lab, and most of my
-        recent work has been building benchmarks that expose a specific
-        failure mode: an answer, a caption, or a judge's score that
-        <em>reads</em> as correct but isn't — in Arabic visual question
-        answering, in culturally grounded reasoning, and in LLM-as-judge
-        evaluation more broadly.
+        My work sits across evaluation and rewards, human feedback and
+        preference-based learning, and data-centric methods for training
+        large language models. In practice, that has meant building
+        benchmarks that expose a specific failure mode: an answer, a
+        caption, or a judge's score that <em>reads</em> as correct but
+        isn't, in Arabic visual question answering, in culturally
+        grounded reasoning, and in LLM-as-judge evaluation. It has also
+        meant building and running KAUST OPTIMAL Lab's Saudi-dialect
+        preference-optimization pipeline (DPO, APO, RLOO), and the
+        evaluation needed to tell whether any of it actually worked.
       </p>
       <p>
-        That question — <em>when does a learning signal look trustworthy
-        while being wrong?</em> — is what's pulling me toward RL. I've
-        started building and running independent multi-agent RL
-        experiments to understand how the same problem shows up when the
-        "signal" is a reward, not a label, and whether the fixes that work
-        for one transfer to the other.
+        RL-based post-training and alignment is the other side of that
+        interest: the same question, asked of a reward instead of a
+        label. My independent RL work tests it directly, for example in
+        a multi-agent social dilemma I built, where an inequity-averse
+        reward meant to encourage cooperation made resource collapse
+        worse instead of better.
       </p>
       <p class="voice-note">
-        Most of this started from a stubborn habit of not trusting a
-        result until I've audited it by hand — on every benchmark I've
-        built, the thing that ended up mattering was the case I almost
-        didn't bother checking.
+        I don't fully trust a result until I've audited it by hand. It's
+        a habit that keeps paying off quietly: the case I almost didn't
+        bother checking is usually the one that mattered.
       </p>
     </div>
   </section>
@@ -148,12 +149,13 @@
           <h3>AI Researcher <span class="tl-org">· ASAS AI Lab (Remote)</span></h3>
           <p>
             Contributed to Joud, a large open-source Arabic pre-training
-            dataset — curated and cleaned multi-domain corpora including
-            Common Crawl subsets, ~60GB of dialectal data, and 20 million
-            Arabic mathematical samples. Select corpora (Common Crawl and
-            Wikipedia subsets) were provided to Prof. Jinchao Xu's lab at
-            KAUST and used in AraLLaMA's (ACL 2025) pre-training pipeline,
-            which reports strong results on ArabicMMLU and ACVA.
+            dataset, under the supervision of Emad Alghamdi. Curated and
+            cleaned multi-domain corpora including Common Crawl subsets,
+            ~60GB of dialectal data, and 20 million Arabic mathematical
+            samples. Select corpora (Common Crawl and Wikipedia subsets)
+            were provided to Prof. Jinchao Xu's lab at KAUST and used in
+            AraLLaMA's (ACL 2025) pre-training pipeline, which reports
+            strong results on ArabicMMLU and ACVA.
           </p>
         </div>
       </article>
@@ -190,36 +192,40 @@
   </section>
 
   <section id="research" class="research reveal">
-    <h2><span class="num">03</span> Research focus</h2>
+    <h2><span class="num">03</span> Research interests</h2>
     <p class="section-lead">
-      Three questions keep showing up in my work, usually in disguise:
+      The four areas my work keeps coming back to:
     </p>
     <div class="card-grid">
       <article class="card">
-        <h3>Trustworthy learning signals</h3>
+        <h3>RL-based post-training and alignment</h3>
         <p>
-          Human feedback, LLM-judge scores, and multi-agent reward sharing
-          all share a failure mode: the signal can look reliable and still
-          be wrong. I design evaluation protocols that catch this by
-          hand-auditing, not just trusting the aggregate score.
+          Training language models with reward signals instead of static
+          labels (DPO, APO, RLOO), and tracking what that training
+          actually changes versus what it just appears to change.
         </p>
       </article>
       <article class="card">
-        <h3>Culturally grounded evaluation</h3>
+        <h3>Evaluation and rewards</h3>
         <p>
-          Benchmarks built specifically for Arabic language and Gulf /
-          Islamic cultural context, where off-the-shelf English benchmarks
-          and translation-based evaluation quietly miss the failure modes
-          that matter.
+          Benchmarks and judges built to check whether a score can be
+          trusted, not just reported as a number.
         </p>
       </article>
       <article class="card">
-        <h3>Multi-agent reinforcement learning</h3>
+        <h3>Human feedback and preference-based learning</h3>
         <p>
-          Independent Q-learning in sequential social dilemmas — when
-          cooperation emerges from self-interested learning alone, when it
-          doesn't, and what reward shaping actually does to agents that
-          can't see each other.
+          What a model learns from being told which answer is better, as
+          opposed to which one is correct, and where that distinction
+          quietly breaks down.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Data-centric methods for LLM training</h3>
+        <p>
+          What goes into a model before training starts: corpus curation,
+          dialectal coverage, and how early data choices resurface later
+          in evaluation.
         </p>
       </article>
     </div>
@@ -242,7 +248,7 @@
           <span class="project-tag">LLM Evaluation</span>
         </div>
         <p class="project-desc">
-          Culturally Aligned vs. Culturally Competent — a benchmark testing
+          Culturally Aligned vs. Culturally Competent: a benchmark testing
           whether multimodal LLMs genuinely understand Gulf/Islamic cultural
           context or just pattern-match plausible answers. Three-tier design
           (MCQ, open-ended, "none of the above") built specifically to catch
@@ -260,19 +266,20 @@
           <span class="project-tag">LLM Evaluation</span>
         </div>
         <p class="project-desc">
-          An Arabic cause-diagnostic visual-hallucination benchmark —
-          testing not just <em>whether</em> a model hallucinates on Arabic
+          An Arabic cause-diagnostic visual-hallucination benchmark that
+          tests not just <em>whether</em> a model hallucinates on Arabic
           visual questions but <em>why</em>: visual ambiguity, multimodal
           inconsistency, or incorrect context, each isolated by construction
-          rather than inferred after the fact. 400+ culturally grounded
-          images, fully original cultural counter-common-sense set.
+          rather than inferred after the fact. 650+ triplets across four
+          modes, built around an original Arabic cultural taxonomy spanning
+          attire, cuisine, architecture, cultural objects, and script.
         </p>
         <div class="project-links">
           <a href="https://github.com/HasanBGit/Sarab-Benchmark" target="_blank" rel="noopener">Repository ↗</a>
         </div>
       </article>
 
-      <h3 class="project-group-label">Reinforcement learning &mdash; self-directed study</h3>
+      <h3 class="project-group-label">Reinforcement learning &middot; self-directed study</h3>
 
       <article class="project">
         <div class="project-head">
@@ -281,7 +288,7 @@
         </div>
         <p class="project-desc">
           Independent tabular Q-learning agents in sequential social
-          dilemmas — iterated matrix games and a spatial tragedy-of-the-commons
+          dilemmas: iterated matrix games and a spatial tragedy-of-the-commons
           gridworld. Includes a real, reported negative result: inequity-averse
           reward shaping made resource collapse <em>worse</em> here, with a
           concrete hypothesis for why, instead of a result quietly dropped.
@@ -299,8 +306,8 @@
         <p class="project-desc">
           Exact dynamic programming (value iteration, policy iteration) checked
           against sample-based TD control (Q-learning, SARSA) on Cliff Walking
-          and Windy Gridworld — verified to converge on the exact same optimum,
-          confirmed independently with a plain BFS. Reproduces the classic
+          and Windy Gridworld, verified to converge on the exact same optimum
+          and confirmed independently with a plain BFS. Reproduces the classic
           result that Q-learning learns the risky optimal path while SARSA
           learns a safer one and pays less for its own exploration.
         </p>
@@ -316,7 +323,7 @@
         </div>
         <p class="project-desc">
           Linear function approximation (tile coding) with semi-gradient
-          SARSA on Mountain Car — the standard example of a control problem
+          SARSA on Mountain Car, the standard example of a control problem
           too large for a tabular method to represent. Learns to pump
           momentum from scratch, cutting steps-to-goal by ~7.6x, and
           includes a step-size sweep that reports a real plateau instead of
@@ -333,9 +340,9 @@
           <span class="project-tag">Reinforcement Learning</span>
         </div>
         <p class="project-desc">
-          DQN built entirely from scratch — a two-layer MLP with the
-          backward pass derived and coded by hand in numpy, no
-          autograd — trained with experience replay and a target network
+          DQN built entirely from scratch: a two-layer MLP with the
+          backward pass derived and coded by hand in numpy, no autograd,
+          trained with experience replay and a target network
           on a self-implemented CartPole. Correctness is checked with a
           finite-difference gradient test, not just "training looks
           fine," and an ablation shows the target network isn't a
@@ -354,8 +361,8 @@
         </div>
         <p class="project-desc">
           Baird's counterexample (Baird, 1995), reproduced to show that
-          naive off-policy semi-gradient TD genuinely diverges — MSPBE
-          goes from 67.6 to 4.17e+22 over 20,000 steps — while GTD2 and
+          naive off-policy semi-gradient TD genuinely diverges: MSPBE
+          goes from 67.6 to 4.17e+22 over 20,000 steps, while GTD2 and
           TDC (Sutton, Maei &amp; Precup, 2009) provably converge to the
           true fixed point instead. The Mean-Squared Projected Bellman
           Error is computed in exact closed form via linear algebra, not
@@ -379,7 +386,7 @@
           stochastic policy can win because the agent can't tell states
           apart. The task's exact performance is solvable in closed
           form, which turns "is this estimator really unbiased" into
-          something directly checkable — and caught a real bug: a
+          something directly checkable, and caught a real bug: a
           missing parameter silently decoupled the sampled gradient from
           the policy being evaluated, converging confidently to the
           wrong sign until the exact-gradient check exposed it.
@@ -395,8 +402,8 @@
           <span class="project-tag">Reinforcement Learning</span>
         </div>
         <p class="project-desc">
-          Multi-armed bandit exploration algorithms — epsilon-greedy, UCB1,
-          Thompson sampling, gradient bandit — compared empirically on
+          Multi-armed bandit exploration algorithms (epsilon-greedy, UCB1,
+          Thompson sampling, gradient bandit) compared empirically on
           stationary and drifting ("restless") bandits rather than by citation
           alone. Shows constant-step-size estimation more than doubling the
           optimal-action rate over sample averaging once the environment
@@ -415,21 +422,21 @@
     <div class="pub-list">
 
       <article class="pub" id="sarab-pub">
-        <p class="pub-status">Manuscript — targeting ACL 2027</p>
+        <p class="pub-status">Manuscript &middot; targeting ACL 2027</p>
         <h3>Sarab: A Cause-Diagnostic Arabic Visual Hallucination Evaluation Benchmark for MLLMs</h3>
         <p class="pub-authors">Alharz, Z., Barmandah, H., Mahyoub, A., &amp; Alahmari, S.&nbsp;S.</p>
-        <p class="pub-note">Constructed and reviewed 400+ culturally grounded images, generated and refined Arabic captions and distractors, and fully created the cultural counter-common-sense set.</p>
+        <p class="pub-note">Constructed and reviewed 400+ culturally grounded images (open-source collection and AI generation), generated and manually refined Arabic captions and distractors for the misleading- and incorrect-context evaluation sets, and fully created the cultural counter-common-sense image set.</p>
       </article>
 
       <article class="pub">
-        <p class="pub-status">Preprint — targeting ACL 2027</p>
+        <p class="pub-status">Preprint &middot; targeting ACL 2027</p>
         <h3>Joud: A Massive Pre-training Dataset for Arabic Large Language Models</h3>
         <p class="pub-authors">Almubarak, K., Alharthi, A., Alshahrani, S., Masoud, R., Altuwayjiri, A., Zhu, J., Alharz, Z., &amp; Alghamdi, E.</p>
-        <p class="pub-note">Built a scraping pipeline for underrepresented Arabic web domains, curated multi-domain corpora, and co-authored the Related Work section. <a href="https://github.com/asas-lab/Joud" target="_blank" rel="noopener">Code ↗</a> &middot; <a href="posters/joud-menaml-2026.pdf" target="_blank" rel="noopener">Poster (MenaML 2026) ↗</a></p>
+        <p class="pub-note">Built a scraping pipeline for underrepresented Arabic web domains and curated multi-domain corpora. <a href="https://github.com/asas-lab/Joud" target="_blank" rel="noopener">Code ↗</a> &middot; <a href="posters/joud-menaml-2026.pdf" target="_blank" rel="noopener">Poster (MenaML &amp; Rising Stars in AI, 2026) ↗</a></p>
       </article>
 
       <article class="pub">
-        <p class="pub-status">Published — ICCAE 2024</p>
+        <p class="pub-status">Published &middot; ICCAE 2024</p>
         <h3>Sarid: Arabic Storyteller Using a Fine-Tuned LLM and Text-to-Image Generation</h3>
         <p class="pub-authors">Alabdulrahman, M., Khayyat, R., Almowallad, K., &amp; Alharz, Z.</p>
         <p class="pub-note">16th International Conference on Computer and Automation Engineering, 242–246. <a href="https://doi.org/10.1109/ICCAE59995.2024.10569190" target="_blank" rel="noopener">View publication ↗</a> &middot; <a href="posters/sarid-iccae-2024.pdf" target="_blank" rel="noopener">Poster ↗</a></p>
@@ -447,12 +454,11 @@
           <li>Best Presentation Award, Digital Image Processing &amp; Methods, ICCAE 2024</li>
           <li>Selected, MenaML Winter School (300 of 2,000+ applicants), 2026</li>
           <li>Selected, Oxford ALAT–KAUST AI Program (15 of 8,000+ applicants), 2024</li>
-          <li>Academic Excellence Award, 2019–2020</li>
-          <li>Academic Excellence Award, 2020–2021</li>
+          <li>Academic Excellence Award</li>
         </ul>
         <h3 class="recog-sub">Education</h3>
         <p class="edu-line">
-          B.S., Computer Science — Imam Abdulrahman Bin Faisal University<br>
+          B.S., Computer Science<br>
           <span class="edu-meta">Graduated Aug 2024</span>
         </p>
       </div>

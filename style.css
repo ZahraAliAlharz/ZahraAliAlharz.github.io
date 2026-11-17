@@ -208,7 +208,7 @@ main {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
