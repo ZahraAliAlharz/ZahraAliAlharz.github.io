@@ -128,14 +128,11 @@
           <h3>Visiting Researcher <span class="tl-org">· OPTIMAL Lab, KAUST</span></h3>
           <p>
             Built a Saudi-dialect preference-optimization pipeline on
-            KAUST's Ibex cluster: two 10K-pair preference datasets,
-            trained with DPO, APO, and RLOO (TRL, PEFT/LoRA), serving
-            27B generators with vLLM. Built a multi-judge scoring
-            pipeline (three LLM judges, five generators, 0.81–0.88
-            inter-judge correlation) and found that base-model choice
-            moved benchmark scores more than any preference-tuning
-            variant tested — which redirected the project's strategy
-            toward evaluation itself as the actual bottleneck.
+            KAUST's Ibex cluster, training large language models with
+            DPO, APO, and RLOO (TRL, PEFT/LoRA) and serving 27B-parameter
+            generators with vLLM. Designed a multi-judge and pairwise
+            evaluation framework to rigorously measure model improvements
+            beyond standard benchmarks.
           </p>
         </div>
       </article>
@@ -150,8 +147,10 @@
             Contributed to Joud, a large open-source Arabic pre-training
             dataset — curated and cleaned multi-domain corpora including
             Common Crawl subsets, ~60GB of dialectal data, and 20 million
-            Arabic mathematical samples. Select corpora were used in
-            AraLLaMA's (ACL 2025) pre-training pipeline.
+            Arabic mathematical samples. Select corpora (Common Crawl and
+            Wikipedia subsets) were provided to Prof. Jinchao Xu's lab at
+            KAUST and used in AraLLaMA's (ACL 2025) pre-training pipeline,
+            which reports strong results on ArabicMMLU and ACVA.
           </p>
         </div>
       </article>
@@ -472,15 +471,15 @@
           </div>
         </div>
         <div class="skill-group">
-          <span class="skill-label">Computer Vision</span>
+          <span class="skill-label">ML/LLM Frameworks</span>
           <div class="skill-tags">
-            <span>YOLOv11</span><span>SAM</span><span>SegFormer</span><span>GroundingDINO</span>
+            <span>Hugging Face Transformers &amp; Datasets</span>
           </div>
         </div>
         <div class="skill-group">
           <span class="skill-label">Programming &amp; Infra</span>
           <div class="skill-tags">
-            <span>Python</span><span>PyTorch</span><span>Docker</span><span>SLURM</span><span>Claude Code</span>
+            <span>Python</span><span>C/C++</span><span>PyTorch</span><span>Docker</span><span>SLURM</span><span>Claude Code</span>
           </div>
         </div>
         <div class="skill-group">
