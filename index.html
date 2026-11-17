@@ -350,6 +350,48 @@
 
       <article class="project">
         <div class="project-head">
+          <h3>gradient-td-rl</h3>
+          <span class="project-tag">Reinforcement Learning</span>
+        </div>
+        <p class="project-desc">
+          Baird's counterexample (Baird, 1995), reproduced to show that
+          naive off-policy semi-gradient TD genuinely diverges — MSPBE
+          goes from 67.6 to 4.17e+22 over 20,000 steps — while GTD2 and
+          TDC (Sutton, Maei &amp; Precup, 2009) provably converge to the
+          true fixed point instead. The Mean-Squared Projected Bellman
+          Error is computed in exact closed form via linear algebra, not
+          estimated from samples, which also surfaced a real wrinkle:
+          Baird's 8-feature matrix is rank-deficient, requiring a
+          pseudoinverse rather than a direct solve.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/ZahraAliAlharz/gradient-td-rl" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>policy-gradient-rl</h3>
+          <span class="project-tag">Reinforcement Learning</span>
+        </div>
+        <p class="project-desc">
+          REINFORCE (Williams, 1992) and the Policy Gradient Theorem on
+          Sutton &amp; Barto's short-corridor task, where only a
+          stochastic policy can win because the agent can't tell states
+          apart. The task's exact performance is solvable in closed
+          form, which turns "is this estimator really unbiased" into
+          something directly checkable — and caught a real bug: a
+          missing parameter silently decoupled the sampled gradient from
+          the policy being evaluated, converging confidently to the
+          wrong sign until the exact-gradient check exposed it.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/ZahraAliAlharz/policy-gradient-rl" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
           <h3>bandit-exploration-lab</h3>
           <span class="project-tag">Reinforcement Learning</span>
         </div>
