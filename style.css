@@ -297,7 +297,7 @@ section > h2 {
   font-weight: 400;
 }
 
-.about, .research, .projects, .contact {
+.about, .experience, .research, .projects, .publications, .recognition, .contact {
   padding: clamp(3rem, 8vh, 5rem) 0;
   border-top: 1px solid var(--border);
 }
