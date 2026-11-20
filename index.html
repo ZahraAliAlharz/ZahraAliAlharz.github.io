@@ -369,7 +369,13 @@
           Error is computed in exact closed form via linear algebra, not
           estimated from samples, which also surfaced a real wrinkle:
           Baird's 8-feature matrix is rank-deficient, requiring a
-          pseudoinverse rather than a direct solve.
+          pseudoinverse rather than a direct solve. A follow-up tracked down
+          why both methods still diverge above a certain step size: their
+          shared auxiliary-vector update gives a closed-form stability bound,
+          beta* = 2/(rho_max·max‖φ‖²); across six setups spanning a 20x range
+          of beta*, including full-rank features, every observed cliff fell
+          above the bound (within 3-39%), ruling out rank-deficiency as the
+          cause.
         </p>
         <div class="project-links">
           <a href="https://github.com/ZahraAliAlharz/gradient-td-rl" target="_blank" rel="noopener">Repository ↗</a>
